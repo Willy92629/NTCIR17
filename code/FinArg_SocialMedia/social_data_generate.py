@@ -75,5 +75,5 @@ def gen_data3(filepath,outpath):
     #    json.dump(output_2,f2,ensure_ascii=False)
 
 #gen_data2("./../../../data/FinArg_SocialMedia/train_social.json","./../../../data/FinArg_SocialMedia/train_social_att_sup.json","./../../../data/FinArg_SocialMedia/test_social_att_sup.json")
-gen_data3("./../../../data/FinArg_SocialMedia/dev_social.json","./../../../data/FinArg_SocialMedia/dev_social_2classification_att_sup.json")
+gen_data3("./../../../data/FinArg_SocialMedia/dev_social.json","./../../../data/FinArg_SocialMedia/dev_social_att_sup.json")
 
