@@ -16,7 +16,7 @@ def gen_data(filepath,outpath):
         output=output+zero_data+zero_data+zero_data+zero_data+zero_data
         
         random.shuffle(output)
-        print(len(output))
+        print(len(output)) 
         output_1=output[0:9500]
         output_2=output[9500:9939]
     with open(outpath,'w',encoding='utf-8') as f2:
