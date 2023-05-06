@@ -21,7 +21,7 @@ def gen_data(filepath,outpath):
         output_2=output[7000:7121]
     with open(outpath,'w',encoding='utf-8') as f2:
         json.dump(output_1,f2,ensure_ascii=False)
-    with open("test_social_2classification.json",'w',encoding='utf-8') as f2:
+    with open("./../../../data/ECC_Argument Relation/test_relation_2classification.json",'w',encoding='utf-8') as f2:
         json.dump(output_2,f2,ensure_ascii=False)
 
 
