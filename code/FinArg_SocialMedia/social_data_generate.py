@@ -25,6 +25,6 @@ def gen_data(filepath,outpath):
     #    json.dump(output_2,f2,ensure_ascii=False)
 
 
-gen_data("train_social.json","train_social_2classification.json")
+gen_data("./../../../data/FinArg_SocialMedia/train_social.json","./../../../data/FinArg_SocialMedia/train_social_2classification2.json")
 #gen_data("dev_social.json","dev_social_2classification.json")
 
