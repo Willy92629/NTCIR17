@@ -1,7 +1,7 @@
 print("hi")
 import json
 import random
-def gen_data(filepath,outpath,outpath2):
+def gen_relation_2classification(filepath,outpath,outpath2):
     output=[]
     zero_data=[]
     with open(filepath,'r',encoding='utf8') as f:
@@ -41,8 +41,9 @@ def gen_data(filepath,outpath,outpath2):
         json.dump(output_2,f2,ensure_ascii=False)
 
 
-gen_data("./../../../data/FinArg_SocialMedia/train_social.json","./../../../data/FinArg_SocialMedia/train_social_2classification.json","./../../../data/FinArg_SocialMedia/test_social_2classification.json")
-def gen_data2(filepath,outpath,outpath2):
+
+#gen_data("./../../../data/FinArg_SocialMedia/train_social.json","./../../../data/FinArg_SocialMedia/train_social_2classification.json","./../../../data/FinArg_SocialMedia/test_social_2classification.json")
+def gen_att_support_data(filepath,outpath,outpath2):
     output=[]
     zero_data=[]
     with open(filepath,'r',encoding='utf-8') as f:
@@ -66,7 +67,7 @@ def gen_data2(filepath,outpath,outpath2):
     with open(outpath2,'w',encoding='utf-8') as f2:
         json.dump(output_2,f2,ensure_ascii=False)
 
-def gen_data3(filepath,outpath):
+def gen_dev_att_support_data(filepath,outpath):
     output=[]
     zero_data=[]
     with open(filepath,'r',encoding='utf-8') as f:
@@ -92,4 +93,28 @@ def gen_data3(filepath,outpath):
 
 #gen_data2("./../../../data/FinArg_SocialMedia/train_social.json","./../../../data/FinArg_SocialMedia/train_social_att_sup.json","./../../../data/FinArg_SocialMedia/test_social_att_sup.json")
 #gen_data3("./../../../data/FinArg_SocialMedia/dev_social.json","./../../../data/FinArg_SocialMedia/dev_social_att_sup.json")
-
+def gen_final_3classification_data(filepath,filepath2,outpath):
+    output=[]
+    zero_data=[]
+    with open(filepath,'r',encoding='utf-8') as f:
+        datas=json.load(f)
+        for i in datas:
+            #print(i)
+            output.append(i)
+            
+        #output=output+zero_data+zero_data+zero_data+zero_data+zero_data
+    with open(filepath2,'r',encoding='utf-8') as f:
+        datas=json.load(f)  
+        for i in datas:
+            #print(i)
+            if i[2]==0:
+                output.append(i)  
+        random.shuffle(output)
+        print(len(output)) 
+        #output_1=output[0:5334]
+        #output_2=output[5334:5834]
+    with open(outpath,'w',encoding='utf-8') as f2: 
+        json.dump(output,f2,ensure_ascii=False)
+    #with open(outpath2,'w',encoding='utf-8') as f2:
+    #    json.dump(output_2,f2,ensure_ascii=False)
+gen_data4("./../../../data/FinArg_SocialMedia/test_social_att_sup.json","./../../../data/FinArg_SocialMedia/test_social_2classification.json","./../../../data/FinArg_SocialMedia/test_social.json")
