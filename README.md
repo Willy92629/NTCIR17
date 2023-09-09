@@ -1,12 +1,12 @@
 # NTCIR
-NTCIR Conference workshop
+NTCIR Conference workshop</br>
 In this study, we present three methods for judging the relationships between sentences. 
 
 
 ## Two-tiered Bert Classification (SMDT_1)
 
 Using two tier of Bert model for Classification.</br>
-The code is including Bert Training and Sentences Classifying. Following Models is for classifying</br>
+The code is including Bert Training and Sentences Classifying.</br>
 [Code](https://github.com/leonardo-lin/NTCIR/blob/main/Two_tiered_Bert_Classification.ipynb)</br></br>
 The First-tiered Model is for separating none from support and attack.</br>
 [bert for none and support with attack model](https://huggingface.co/Leonardolin/NTCIR_none_and_s_with_a)</br>
